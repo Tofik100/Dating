@@ -1,10 +1,18 @@
 
-name: Publish Website to CPanel
+
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches:
-      - master
-jobs:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+  jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
@@ -18,5 +26,3 @@ jobs:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        # git-ftp-args: --remote-root ${{ secrets.FTP_REMOTE_ROOT }}
-        local-dir: dist
