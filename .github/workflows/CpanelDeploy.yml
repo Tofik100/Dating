@@ -17,7 +17,7 @@ jobs:
       with:
         ftp-server: ftp.ctportfolio.in
         ftp-username: dating
-        ftp-password: "!@#admin!@#"
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
         # local-dir: ./
         # ftp-server: ${{ secrets.FTP_SERVER }}
         # ftp-username: ${{ secrets.FTP_USERNAME }}
