@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: server-deploy
-    #   with:
-    #     php-version: '8.0'
-    # - uses: actions/checkout@v2
+      with:
+        php-version: '8.0'
+    - uses: actions/checkout@v2
     with:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
