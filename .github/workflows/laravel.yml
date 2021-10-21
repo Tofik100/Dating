@@ -17,9 +17,9 @@ jobs:
 
       uses: actions/checkout@v2
 
-    - name: Deployment
+    # - name: Deployment
 
-      # uses: appleboy/ssh-action@main
+    #   uses: appleboy/ssh-action@main
 
       with:
 
