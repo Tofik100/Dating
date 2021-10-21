@@ -1,9 +1,16 @@
+name: Build
 
-// .github/workflows/laravel.yml
+on:
+  push:
+    branches: master 
+    tags:
+      - 'v*' 
+  pull_request:
+    branches: master
 
-  deploy:
+deploy: deploy
 
-    runs-on: ubuntu-latest
+  runs-on: ubuntu-latest
 
   steps:
 
@@ -13,7 +20,7 @@
 
     - name: Deployment
 
-      uses: appleboy/ssh-action@master
+      uses: appleboy/ssh-action@main
 
       with:
 
