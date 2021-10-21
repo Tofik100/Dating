@@ -1,32 +1,32 @@
 
-name: Publish Website to CPanel
-on:
-  push:
-    branches:
-      - master
-jobs:
-  FTP-Deploy-Action:
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: appleboy/ssh-action@main
+// .github/workflows/laravel.yml
+
+deploy:
+
+  runs-on: ubuntu-latest
+
+  steps:
+
+    - name: Checkout
+
+      uses: actions/checkout@v2
+
+    - name: Deployment
+
+      uses: appleboy/ssh-action@master
 
       with:
 
-        ftp-server: ${{ secrets.FTP_SERVER }}
+        host: ${{ secrets.SSH_HOST }}
 
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      # with:
+        username: ${{ secrets.SSH_USERNAME }}
 
-      #   host: ${{ secrets.SSH_HOST }}
+        # script: |
 
-      #   key: ${{ secrets.SSH_PRIVATE_KEY }}
+        #   cd /var/www/html/
 
-      #   username: ${{ secrets.SSH_USERNAME }}
+        #   git checkout -f 
+
+        #   git pull
