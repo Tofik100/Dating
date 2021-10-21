@@ -9,7 +9,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.32.0
+    - uses: actions/checkout@v2.1.0
       # with:
        
     - name: FTP-Deploy-Action
