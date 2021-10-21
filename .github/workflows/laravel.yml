@@ -9,11 +9,11 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
+    - uses: actions/checkout@v2.32.0
       # with:
        
     - name: FTP-Deploy-Action
-      uses: Tofik100/Dating@3.1.1
+      uses: Tofik100/Dating@2.32.0
       with:
         fetch-depth: 2
         ftp-server: ${{ secrets.FTP_SERVER }}
