@@ -13,8 +13,6 @@ jobs:
     - id: gcloud
     -  uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
     +  uses: google-github-actions/setup-gcloud@master
-      with:
-        fetch-depth: 2
     - name: Dating
       uses: Tofik100/Dating@master
       with:
