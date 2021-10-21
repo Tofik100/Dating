@@ -2,8 +2,15 @@
 // .github/workflows/laravel.yml
 
 
- name: Checkout code
- uses: actions/checkout@v2
+name: Build and Script
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
 
   steps:
 
