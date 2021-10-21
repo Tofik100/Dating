@@ -8,7 +8,6 @@ jobs:
   FTP-Deploy-Action:
     name: Deploy
     runs-on: ubuntu-latest
-    steps:
       with:
         fetch-depth: 2
     - name: Dating
