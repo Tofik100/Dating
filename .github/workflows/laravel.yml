@@ -1,9 +1,8 @@
 
 // .github/workflows/laravel.yml
 
-deploy:
-
-  runs-on: ubuntu-latest
+name: Checkout code
+  uses: actions/checkout@v2
 
   steps:
 
