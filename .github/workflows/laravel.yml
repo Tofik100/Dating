@@ -1,30 +1,27 @@
-name: Build
 
-on:
-  push:
-    branches: master 
-    tags:
-      - 'v*' 
-  pull_request:
-    branches: master
+// .github/workflows/laravel.yml
 
-jobs:
+deploy: test
 
-  - name: Checkout
+  runs-on: ubuntu-latest
 
-    uses: actions/checkout@v2
+  steps:
 
-  - name: Deployment
+    - name: Checkout
 
-    uses: appleboy/ssh-action@main
+      uses: actions/checkout@v2
 
-    with:
+    - name: Deployment
 
-      host: ${{ secrets.SSH_HOST }}
+      uses: appleboy/ssh-action@main
 
-      key: ${{ secrets.SSH_PRIVATE_KEY }}
+      with:
 
-      username: ${{ secrets.SSH_USERNAME }}
+        host: ${{ secrets.SSH_HOST }}
+
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+        username: ${{ secrets.SSH_USERNAME }}
 
         # script: |
 
