@@ -1,8 +1,8 @@
 
-# // .github/workflows/laravel.yml
+// .github/workflows/laravel.yml
 
-# name: Checkout code
-#   uses: actions/checkout@v2
+name: Checkout code
+  uses: actions/checkout@v2
 
   steps:
 
