@@ -15,10 +15,15 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
 
-      with:
+        with:
+        ftp-server: ${{ secrets.FTP_SERVER }}
+        ftp-username: ${{ secrets.FTP_USERNAME }}
+        ftp-password: ${{ secrets.FTP_PASSWORD }}
 
-        host: ${{ secrets.SSH_HOST }}
+      # with:
 
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #   host: ${{ secrets.SSH_HOST }}
 
-        username: ${{ secrets.SSH_USERNAME }}
+      #   key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      #   username: ${{ secrets.SSH_USERNAME }}
