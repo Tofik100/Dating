@@ -1,7 +1,7 @@
 
 // .github/workflows/laravel.yml
 
-deploy: test
+name: test
 
 runs-on: ubuntu-latest
 
