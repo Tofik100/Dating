@@ -3,7 +3,7 @@
 
 deploy: test
 
-  runs-on: ubuntu-latest
+runs-on: ubuntu-latest
 
   steps:
 
