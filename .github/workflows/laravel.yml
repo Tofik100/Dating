@@ -13,7 +13,7 @@ jobs:
       with:
         fetch-depth: 2
     - name: FTP-Deploy-Action
-      uses: Tofik100/FTP-Deploy-Action@3.1.1
+      uses: Tofik100/Dating@3.1.1
       with:
         ftp-server: ${{ secrets.FTP_SERVER }}
         ftp-username: ${{ secrets.FTP_USERNAME }}
