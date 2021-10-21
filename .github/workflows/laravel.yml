@@ -1,17 +1,10 @@
 
-# // .github/workflows/laravel.yml
 
+// .github/workflows/laravel.yml
 
+deploy:
 
-# name: Build and Script
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  build:
-    runs-on: [ubuntu-latest]
+  runs-on: ubuntu-latest
 
   steps:
 
@@ -33,7 +26,7 @@ jobs:
 
         script: |
 
-          cd /public_html/Dating
+          cd /public_html/Dating/
 
           git checkout -f 
 
