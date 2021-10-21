@@ -3,7 +3,7 @@
 
 
 
-name: Build and Script
+# name: Build and Script
 on:
   push:
     branches:
