@@ -1,25 +1,19 @@
-name: Laravel
 
+name: Publish Website to CPanel
 on:
   push:
-    branches: master
-  pull_request:
-    branches: master
-
+    branches:
+      - master
 jobs:
-  laravel-tests:
-
+  FTP-Deploy-Action:
+    name: Deploy
     runs-on: ubuntu-latest
-
     steps:
-
-    - name: Checkout
-
-      uses: actions/checkout@v2
-
-    # - name: Deployment
-
-    #   uses: appleboy/ssh-action@main
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
 
       with:
 
@@ -28,11 +22,3 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
 
         username: ${{ secrets.SSH_USERNAME }}
-
-        script: |
-
-          cd /public_html/Dating
-
-          git checkout -f 
-
-          git pull
